@@ -3,448 +3,311 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>DentalFlow AI - Dental Websites, AI Voice Assistant & Google Business</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+    <title>DentalFlow AI - 24/7 Voice AI Patient Booking Agent</title>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <style>
-        .gradient-bg {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        }
-        .blue-gradient {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        }
-        .card-shadow {
-            box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.1);
-        }
-        .btn-primary {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-        }
-        .btn-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.3);
-        }
-        .text-blue {
-            color: #667eea;
-        }
-        .bg-blue {
-            background-color: #667eea;
-        }
-        .border-blue {
-            border-color: #667eea;
-        }
-        .hover:text-blue:hover {
-            color: #667eea;
-        }
-        .hover:bg-blue:hover {
-            background-color: #667eea;
-        }
-        .section-padding {
-            padding: 6rem 0;
-        }
-        @media (max-width: 768px) {
-            .section-padding {
-                padding: 4rem 0;
-            }
-        }
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
-<body class="bg-white font-sans leading-relaxed" x-data="{ mobileMenuOpen: false }">
-    <!-- Navbar -->
-    <nav class="bg-white shadow-lg sticky top-0 z-50" data-aos="fade-down">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-16">
-                <div class="flex items-center">
-                    <h1 class="text-2xl font-bold text-blue">DentalFlow AI</h1>
-                </div>
-                <div class="hidden md:flex items-center space-x-8">
-                    <a href="#home" class="text-gray-600 hover:text-blue transition-colors">Home</a>
-                    <a href="#demo" class="text-gray-600 hover:text-blue transition-colors">Demo</a>
-                    <a href="#pricing" class="text-gray-600 hover:text-blue transition-colors">Pricing</a>
-                    <a href="#contact" class="text-gray-600 hover:text-blue transition-colors">Contact</a>
-                    <button class="bg-blue text-white px-4 py-2 rounded-lg hover:shadow-lg transition-shadow">
-                        Book Demo
-                    </button>
-                </div>
-                <div class="md:hidden">
-                    <button @click="mobileMenuOpen = !mobileMenuOpen" class="text-gray-600 hover:text-blue">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                        </svg>
-                    </button>
-                </div>
+<body>
+    <!-- NAVBAR -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo">
+                <div class="logo-icon">🎯</div>
+                <span>DentalFlow AI</span>
             </div>
-        </div>
-        <div x-show="mobileMenuOpen" class="md:hidden bg-white border-t">
-            <div class="px-2 pt-2 pb-3 space-y-1">
-                <a href="#home" class="block px-3 py-2 text-gray-600 hover:text-blue">Home</a>
-                <a href="#demo" class="block px-3 py-2 text-gray-600 hover:text-blue">Demo</a>
-                <a href="#pricing" class="block px-3 py-2 text-gray-600 hover:text-blue">Pricing</a>
-                <a href="#contact" class="block px-3 py-2 text-gray-600 hover:text-blue">Contact</a>
-                <button class="w-full bg-blue text-white px-4 py-2 rounded-lg hover:shadow-lg transition-shadow">
-                    Book Demo
-                </button>
-            </div>
+            <ul class="nav-links">
+                <li><a href="#features">Features</a></li>
+                <li><a href="#how-it-works">How It Works</a></li>
+                <li><a href="#results">Results</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><button class="cta-button">Book Demo</button></li>
+            </ul>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section id="home" class="section-padding bg-gradient-to-r from-blue-50 to-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center">
-<h1 class="text-4xl md:text-6xl font-bold text-gray-900 mb-6" data-aos="fade-up">
-                    Never Miss Another Patient Appointment
-                </h1>
-<p class="text-xl text-gray-600 mb-8" data-aos="fade-up" data-aos-delay="100">
-                    Our AI voice assistant books patients 24/7, so you never miss an appointment again. Watch your sales grow automatically.
-                </p>
-<div class="flex flex-col sm:flex-row gap-4 justify-center" data-aos="fade-up" data-aos-delay="200">
-                    <button class="btn-primary px-8 py-4 rounded-lg text-lg font-semibold hover:shadow-lg transition-shadow">
-                        See AI Assistant in Action
-                    </button>
-                    <button class="bg-white border-2 border-blue text-blue px-8 py-4 rounded-lg text-lg font-semibold hover:shadow-lg transition-shadow" onclick="window.location.href='tel:+923225532479'">
-                        Call Demo Now
-                    </button>
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content" data-aos="fade-up">
+                <h1>Your 24/7 <span class="gradient-text">AI Patient Booking Agent</span></h1>
+                <p>Never miss another patient call. DentalFlow AI answers, schedules appointments, and sends reminders—completely automated. Increase revenue while reducing no-shows.</p>
+                
+                <div class="hero-buttons">
+                    <button class="btn-primary" data-aos="fade-up" data-aos-delay="100">Start Free Trial</button>
+                    <button class="btn-secondary" data-aos="fade-up" data-aos-delay="200">Watch Demo Video</button>
                 </div>
-            </div>
-        </div>
-    </section>
 
-<!-- Services Section -->
-<section id="services" class="section-padding bg-gradient-to-r from-blue-50 to-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-8">
-            <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-12" data-aos="fade-up">
-                The Ultimate Patient Booking Solution
-            </h2>
-        </div>
-
-        <!-- Centered Grid for 2 Cards with minimized gap -->
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 justify-items-center">
-            <!-- Card 1 -->
-            <div class="bg-white rounded-lg p-6 card-shadow w-full max-w-sm" data-aos="fade-up">
-                <div class="text-5xl mb-4 text-blue">🏗️</div>
-                <h3 class="text-2xl font-bold text-gray-900 mb-3">Custom Dental Websites</h3>
-                <p class="text-gray-600 mb-4">
-                    Professional, mobile-responsive websites built specifically for dental practices with integrated voice-activated booking systems.
-                </p>
-                <ul class="text-gray-600 mb-4 space-y-2">
-                    <li class="flex items-center">
-                        <svg class="w-5 h-5 text-blue mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                        </svg>
-                        Custom design tailored to your practice
-                    </li>
-                    <li class="flex items-center">
-                        <svg class="w-5 h-5 text-blue mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                        </svg>
-                        Voice-activated appointment booking
-                    </li>
-                    <li class="flex items-center">
-                        <svg class="w-5 h-5 text-blue mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                        </svg>
-                        SEO optimized for local search
-                    </li>
-                    <li class="flex items-center">
-                        <svg class="w-5 h-5 text-blue mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                        </svg>
-                        Mobile responsive design
-                    </li>
-                </ul>
-            </div>
-
-            <!-- Card 2 -->
-            <div class="bg-white rounded-lg p-6 card-shadow w-full max-w-sm" data-aos="fade-up" data-aos-delay="100">
-                <div class="text-5xl mb-4 text-blue">🤖</div>
-                <h3 class="text-2xl font-bold text-gray-900 mb-3">AI Voice Assistant</h3>
-                <p class="text-gray-600 mb-4">
-                    24/7 voice-based patient communication with natural language processing for seamless appointment scheduling.
-                </p>
-                <ul class="text-gray-600 mb-4 space-y-2">
-                    <li class="flex items-center">
-                        <svg class="w-5 h-5 text-blue mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                        </svg>
-                        Natural voice conversations
-                    </li>
-                    <li class="flex items-center">
-                        <svg class="w-5 h-5 text-blue mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                        </svg>
-                        Appointment reminders and follow-ups
-                    </li>
-                    <li class="flex items-center">
-                        <svg class="w-5 h-5 text-blue mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                        </svg>
-                        Integrates with your existing systems
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- How It Works Section -->
-<section id="how-it-works" class="section-padding bg-white">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-12" data-aos="fade-up">
-            How Our Solutions Work
-        </h2>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-            <div data-aos="fade-up">
-                <div class="text-4xl mb-4 text-blue">1</div>
-                <h3 class="text-xl font-semibold mb-3">Consultation</h3>
-                <p class="text-gray-600">We understand your practice needs and goals</p>
-            </div>
-            <div data-aos="fade-up" data-aos-delay="100">
-                <div class="text-4xl mb-4 text-blue">2</div>
-                <h3 class="text-xl font-semibold mb-3">Implementation</h3>
-                <p class="text-gray-600">Custom solution development and integration</p>
-            </div>
-            <div data-aos="fade-up" data-aos-delay="200">
-                <div class="text-4xl mb-4 text-blue">3</div>
-                <h3 class="text-xl font-semibold mb-3">Launch & Optimize</h3>
-                <p class="text-gray-600">Go live and continuous performance optimization</p>
-            </div>
-        </div>
-    </div>
-</section>
-    <!-- Two Options -->
-    <section id="options" class="section-padding bg-gray-50">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-<h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-8 text-center" data-aos="fade-up">
-                Choose Your Perfect Solution
-            </h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div class="bg-white rounded-lg p-8 card-shadow" data-aos="fade-up">
-<h3 class="text-2xl font-bold text-blue mb-4">Enhance Your Current Website</h3>
-                    <p class="text-gray-600 mb-6">Add our AI voice assistant and booking system to your existing website.</p>
-                    <ul class="text-gray-600 mb-6 space-y-2">
-                        <li class="flex items-center">
-                            <svg class="w-5 h-5 text-blue mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                            </svg>
-                            Quick integration
-                        </li>
-                        <li class="flex items-center">
-                            <svg class="w-5 h-5 text-blue mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                            </svg>
-                            Minimal disruption
-                        </li>
-                        <li class="flex items-center">
-                            <svg class="w-5 h-5 text-blue mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                            </svg>
-                            Fast results
-                        </li>
-                    </ul>
-                    <button class="btn-primary w-full py-3 rounded-lg text-lg font-semibold hover:shadow-lg transition-shadow">
-                        Upgrade My Website
-                    </button>
-                </div>
-                <div class="bg-white rounded-lg p-8 card-shadow" data-aos="fade-up" data-aos-delay="100">
-<h3 class="text-2xl font-bold text-blue mb-4">Build a New Website</h3>
-                    <p class="text-gray-600 mb-6">Get a complete custom website with AI voice assistant built-in.</p>
-                    <ul class="text-gray-600 mb-6 space-y-2">
-                        <li class="flex items-center">
-                            <svg class="w-5 h-5 text-blue mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                            </svg>
-                            Custom design
-                        </li>
-                        <li class="flex items-center">
-                            <svg class="w-5 h-5 text-blue mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                            </svg>
-                            Full booking system
-                        </li>
-                        <li class="flex items-center">
-                            <svg class="w-5 h-5 text-blue mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                            </svg>
-                            Mobile responsive
-                        </li>
-                    </ul>
-                    <button class="btn-primary w-full py-3 rounded-lg text-lg font-semibold hover:shadow-lg transition-shadow">
-                        Build My Website
-                    </button>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Demo Section -->
-    <section id="demo" class="section-padding bg-white">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-<h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-8" data-aos="fade-up">
-                Experience Our AI Solutions
-            </h2>
-<p class="text-xl text-gray-600 mb-8" data-aos="fade-up" data-aos-delay="100">
-                See how our AI solutions transform patient communication and booking.
-            </p>
-<div class="flex flex-col sm:flex-row gap-4 justify-center" data-aos="fade-up" data-aos-delay="200">
-                <button class="btn-primary px-8 py-4 rounded-lg text-lg font-semibold hover:shadow-lg transition-shadow">
-                    Watch Website Demo
-                </button>
-                <button class="bg-white border-2 border-blue text-blue px-8 py-4 rounded-lg text-lg font-semibold hover:shadow-lg transition-shadow" onclick="window.location.href='tel:+923225532479'">
-                    Call AI Assistant
-                </button>
-                <button class="bg-white border-2 border-blue text-blue px-8 py-4 rounded-lg text-lg font-semibold hover:shadow-lg transition-shadow">
-                    See Google Business Results
-                </button>
-            </div>
-        </div>
-    </section>
-
-    <!-- Results Section -->
-    <section id="results" class="section-padding bg-gray-50">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-<h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-8" data-aos="fade-up">
-                Results You Can Expect
-            </h2>
-<div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-                    <div class="bg-white rounded-lg p-8 card-shadow" data-aos="fade-up">
-                        <div class="text-5xl mb-6 text-blue">🤖</div>
-                        <h3 class="text-2xl font-bold text-gray-900 mb-4">AI Voice Assistant</h3>
-                        <p class="text-gray-600 mb-6">24/7 voice-based patient booking that never sleeps. Our AI answers calls, schedules appointments, and follows up automatically.</p>
-                        <ul class="text-gray-600 mb-6 space-y-3">
-                            <li class="flex items-center">
-                                <svg class="w-5 h-5 text-blue mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                                </svg>
-                                Never miss a patient call
-                            </li>
-                            <li class="flex items-center">
-                                <svg class="w-5 h-5 text-blue mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                                </svg>
-                                Automatic appointment scheduling
-                            </li>
-                            <li class="flex items-center">
-                                <svg class="w-5 h-5 text-blue mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                                </svg>
-                                Follow-up reminders
-                            </li>
-                            <li class="flex items-center">
-                                <svg class="w-5 h-5 text-blue mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                                </svg>
-                                Multi-language support
-                            </li>
-                        </ul>
-                        <button class="btn-primary w-full py-3 rounded-lg text-lg font-semibold hover:shadow-lg transition-shadow">
-                            Start Booking Patients
-                        </button>
-                    </div>
-                    <div class="bg-white rounded-lg p-8 card-shadow" data-aos="fade-up" data-aos-delay="100">
-                        <div class="text-5xl mb-6 text-blue">🏗️</div>
-                        <h3 class="text-2xl font-bold text-gray-900 mb-4">Professional Website</h3>
-                        <p class="text-gray-600 mb-6">A custom website that works with our AI assistant to convert visitors into booked patients.</p>
-                        <ul class="text-gray-600 mb-6 space-y-3">
-                            <li class="flex items-center">
-                                <svg class="w-5 h-5 text-blue mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                                </svg>
-                                Mobile responsive design
-                            </li>
-                            <li class="flex items-center">
-                                <svg class="w-5 h-5 text-blue mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                                </svg>
-                                SEO optimized
-                            </li>
-                            <li class="flex items-center">
-                                <svg class="w-5 h-5 text-blue mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                                </svg>
-                                Integrated booking system
-                            </li>
-                            <li class="flex items-center">
-                                <svg class="w-5 h-5 text-blue mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                                </svg>
-                                Patient forms
-                            </li>
-                        </ul>
-                We guarantee results with our AI solutions or we'll work for free until you do.
-            </p>
-            <div class="bg-white rounded-lg p-8 card-shadow" data-aos="fade-up" data-aos-delay="200">
-                <div class="text-4xl mb-4 text-blue">🤝</div>
-                <h3 class="text-xl font-bold text-gray-900 mb-3">Risk-Free Guarantee</h3>
-                <p class="text-gray-600">We're confident in our system. Your success is our success.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section id="contact" class="section-padding bg-gradient-to-r from-blue-50 to-white">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-<h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6" data-aos="fade-up">
-                Ready to Transform Your Practice?
-            </h2>
-<p class="text-xl text-gray-600 mb-8" data-aos="fade-up" data-aos-delay="100">
-                Book a free consultation and see how our AI voice assistant can book more patients for your practice.
-            </p>
-<button class="btn-primary px-8 py-4 rounded-lg text-lg font-semibold hover:shadow-lg transition-shadow" data-aos="fade-up" data-aos-delay="200">
-                Start Booking Patients
-            </button>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-8">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
-                <div data-aos="fade-up">
-                    <h3 class="text-xl font-bold mb-4">DentalFlow AI</h3>
-<p class="text-gray-400">Transform your dental practice with AI-powered websites, voice assistants, and Google Business optimization.</p>
-                </div>
-                <div data-aos="fade-up" data-aos-delay="100">
-                    <h4 class="font-semibold mb-4">Product</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="#" class="hover:text-white transition-colors">Features</a></li>
-                        <li><a href="#" class="hover:text-white transition-colors">Pricing</a></li>
-                        <li><a href="#" class="hover:text-white transition-colors">Integrations</a></li>
-                        <li><a href="#" class="hover:text-white transition-colors">API</a></li>
-                    </ul>
-                </div>
-                <div data-aos="fade-up" data-aos-delay="200">
-                    <h4 class="font-semibold mb-4">Company</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="#" class="hover:text-white transition-colors">About</a></li>
-                        <li><a href="#" class="hover:text-white transition-colors">Blog</a></li>
-                        <li><a href="#" class="hover:text-white transition-colors">Careers</a></li>
-                        <li><a href="#" class="hover:text-white transition-colors">Contact</a></li>
-                    </ul>
-                </div>
                 <div data-aos="fade-up" data-aos-delay="300">
-                    <h4 class="font-semibold mb-4">Legal</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="#" class="hover:text-white transition-colors">Privacy</a></li>
-                        <li><a href="#" class="hover:text-white transition-colors">Terms</a></li>
-                        <li><a href="#" class="hover:text-white transition-colors">Security</a></li>
+                    <div class="wave-container">
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                    </div>
+                    <p class="wave-text">AI Voice Technology • Natural Conversations • 24/7 Available</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FEATURES SECTION -->
+    <section class="features section-padding" id="features">
+        <div class="container">
+            <h2 data-aos="fade-up">Enterprise-Grade Features</h2>
+            <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Everything your dental practice needs to automate patient communication and boost revenue.</p>
+
+            <div class="features-grid">
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="0">
+                    <div class="feature-icon">📞</div>
+                    <h3>Intelligent Call Handling</h3>
+                    <p>Answers calls instantly, 24/7. Understands patient intent and routes appropriately. Never miss a call again.</p>
+                </div>
+
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="feature-icon">📅</div>
+                    <h3>Automatic Appointment Booking</h3>
+                    <p>Real-time scheduling integrated with your practice management system. Instant confirmations, no double bookings.</p>
+                </div>
+
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="feature-icon">🔔</div>
+                    <h3>Smart Reminder System</h3>
+                    <p>Automated 24-hour and 1-hour reminders. Reduces no-shows by 80%. Handles cancellations automatically.</p>
+                </div>
+
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="feature-icon">🌍</div>
+                    <h3>Multi-Language Support</h3>
+                    <p>Serves patients in their preferred language. Automatically detects and responds in Spanish, Mandarin, and more.</p>
+                </div>
+
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="feature-icon">⚙️</div>
+                    <h3>Seamless Integration</h3>
+                    <p>Works with all major practice management systems. Easy 10-minute setup with zero technical expertise needed.</p>
+                </div>
+
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="500">
+                    <div class="feature-icon">📊</div>
+                    <h3>Advanced Analytics</h3>
+                    <p>Track every call, conversion rate, and ROI. Detailed insights to continuously optimize your practice.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section class="how-it-works section-padding" id="how-it-works">
+        <div class="container">
+            <h2 data-aos="fade-up">How DentalFlow AI Works</h2>
+            <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">A simple 4-step process that transforms patient communication.</p>
+
+            <div class="process-steps">
+                <div class="step" data-aos="fade-up" data-aos-delay="0">
+                    <div class="step-number">1</div>
+                    <h3>Patient Calls</h3>
+                    <p>Your phone number connects to DentalFlow. The AI answers instantly with a warm, professional greeting.</p>
+                </div>
+
+                <div class="step" data-aos="fade-up" data-aos-delay="100">
+                    <div class="step-number">2</div>
+                    <h3>AI Understands</h3>
+                    <p>Natural language processing identifies what the patient needs—appointment, emergency, reschedule, or questions.</p>
+                </div>
+
+                <div class="step" data-aos="fade-up" data-aos-delay="200">
+                    <div class="step-number">3</div>
+                    <h3>Books Appointment</h3>
+                    <p>Real-time calendar sync. The AI checks availability and books directly into your system.</p>
+                </div>
+
+                <div class="step" data-aos="fade-up" data-aos-delay="300">
+                    <div class="step-number">4</div>
+                    <h3>Automated Follow-up</h3>
+                    <p>Reminders sent automatically. Handles reschedules and cancellations without staff involvement.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- RESULTS SECTION -->
+    <section class="results section-padding" id="results">
+        <div class="container">
+            <h2 data-aos="fade-up">Results You Can Expect</h2>
+            <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Real numbers from dental practices using DentalFlow AI.</p>
+
+            <div class="stats-grid">
+                <div class="stat-box" data-aos="fade-up" data-aos-delay="0">
+                    <div class="stat-number">85%</div>
+                    <div class="stat-label">Fewer Missed Calls</div>
+                </div>
+
+                <div class="stat-box" data-aos="fade-up" data-aos-delay="100">
+                    <div class="stat-number">45%</div>
+                    <div class="stat-label">More Booked Appointments</div>
+                </div>
+
+                <div class="stat-box" data-aos="fade-up" data-aos-delay="200">
+                    <div class="stat-number">80%</div>
+                    <div class="stat-label">Reduction in No-Shows</div>
+                </div>
+
+                <div class="stat-box" data-aos="fade-up" data-aos-delay="300">
+                    <div class="stat-number">24/7</div>
+                    <div class="stat-label">Always Available</div>
+                </div>
+            </div>
+
+            <div class="revenue-highlight" data-aos="fade-up" data-aos-delay="400">
+                <p class="revenue-text">Average Practice Gains</p>
+                <div class="revenue-number">+$12K-15K Monthly Revenue</div>
+                <p style="color: var(--text-secondary); margin-top: 10px;">From recovered calls and automated scheduling</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="testimonials section-padding" id="testimonials">
+        <div class="container">
+            <h2 data-aos="fade-up" style="text-align: center;">Trusted by Dental Practices</h2>
+
+            <div class="testimonial-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="testimonial-avatar">👩‍⚕️</div>
+                <div class="testimonial-name">Dr. Sarah Mitchell</div>
+                <div class="testimonial-role">Premier Dental Group, California</div>
+                <p class="testimonial-text">"DentalFlow AI has been a complete game-changer. We went from missing 20+ calls daily to capturing almost every incoming call. The scheduling is seamless, natural-sounding, and our patients absolutely love it. We've recovered $40K+ in the first month alone."</p>
+                <div class="stars">★★★★★</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRICING -->
+    <section class="pricing section-padding" id="pricing">
+        <div class="container">
+            <h2 data-aos="fade-up">Simple, Transparent Pricing</h2>
+            <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Only pay for what you use. No hidden fees. Cancel anytime.</p>
+
+            <div class="pricing-grid">
+                <div class="pricing-card" data-aos="fade-up" data-aos-delay="0">
+                    <div class="pricing-title">Starter</div>
+                    <div class="pricing-subtitle">For solo practices</div>
+                    <div class="pricing-amount">$499</div>
+                    <div class="pricing-period">/month, billed monthly</div>
+                    <ul class="pricing-features">
+                        <li><span class="check-icon">✓</span> Up to 500 calls/month</li>
+                        <li><span class="check-icon">✓</span> Call handling & booking</li>
+                        <li><span class="check-icon">✓</span> Appointment reminders</li>
+                        <li><span class="check-icon">✓</span> Basic analytics</li>
+                        <li><span class="check-icon">✓</span> Email support</li>
+                    </ul>
+                    <button class="btn-secondary" style="width: 100%;">Get Started</button>
+                </div>
+
+                <div class="pricing-card featured" data-aos="fade-up" data-aos-delay="100">
+                    <div class="pricing-badge">MOST POPULAR</div>
+                    <div class="pricing-title">Professional</div>
+                    <div class="pricing-subtitle">For growing practices</div>
+                    <div class="pricing-amount">$999</div>
+                    <div class="pricing-period">/month, billed monthly</div>
+                    <ul class="pricing-features">
+                        <li><span class="check-icon">✓</span> Unlimited calls</li>
+                        <li><span class="check-icon">✓</span> Multi-location support</li>
+                        <li><span class="check-icon">✓</span> Advanced analytics</li>
+                        <li><span class="check-icon">✓</span> Priority support</li>
+                        <li><span class="check-icon">✓</span> Custom training</li>
+                    </ul>
+                    <button class="btn-primary" style="width: 100%;">Start Free Trial</button>
+                </div>
+
+                <div class="pricing-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="pricing-title">Enterprise</div>
+                    <div class="pricing-subtitle">Custom solutions</div>
+                    <div class="pricing-amount">Custom</div>
+                    <div class="pricing-period">Contact for pricing</div>
+                    <ul class="pricing-features">
+                        <li><span class="check-icon">✓</span> Unlimited everything</li>
+                        <li><span class="check-icon">✓</span> White-label option</li>
+                        <li><span class="check-icon">✓</span> Dedicated account manager</li>
+                        <li><span class="check-icon">✓</span> Custom integrations</li>
+                        <li><span class="check-icon">✓</span> 24/7 phone support</li>
+                    </ul>
+                    <button class="btn-secondary" style="width: 100%;">Contact Sales</button>
+                </div>
+            </div>
+
+            <p style="text-align: center; color: var(--text-secondary); margin-top: 40px;">All plans include a 7-day free trial. No credit card required.</p>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section-padding" id="contact">
+        <div class="container">
+            <div class="cta">
+                <h2>Ready to Transform Your Practice?</h2>
+                <p>Join the fastest-growing dental practices using DentalFlow AI. Start your free 7-day trial today—no credit card required.</p>
+                <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
+                    <button class="btn-primary">Start Free Trial</button>
+                    <button class="btn-secondary">Schedule a Demo Call</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 15px;">
+                        <div class="logo-icon">🎯</div>
+                        <span style="font-weight: 700; font-size: 1.1rem;">DentalFlow AI</span>
+                    </div>
+                    <p style="color: var(--text-secondary);">Enterprise AI voice agent for dental practices. Never miss a patient again.</p>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Product</h4>
+                    <ul>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#pricing">Pricing</a></li>
+                        <li><a href="#">Security</a></li>
+                        <li><a href="#">API Docs</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Cookie Policy</a></li>
                     </ul>
                 </div>
             </div>
-            <div class="border-t border-gray-800 pt-8 text-center text-gray-400">
-                <p>&copy; 2024 DentalFlow AI. All rights reserved.</p>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 DentalFlow AI. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
-    <script>
-        AOS.init({
-            duration: 800,
-            once: true
-        });
-    </script>
+    <!-- SCRIPTS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
