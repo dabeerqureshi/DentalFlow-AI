@@ -3,299 +3,448 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DentalFlow AI - 24/7 Voice AI Patient Booking Agent</title>
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <title>Vertex AI — 24/7 WhatsApp & Voice AI Automations for Every Business</title>
+    <meta name="description" content="Vertex AI builds intelligent WhatsApp chatbots and AI voice agents that work 24/7 — booking appointments, capturing leads and following up for any business, in any niche. Intelligence in Motion.">
+    <meta name="keywords" content="WhatsApp automation, AI voice agent, AI chatbot, appointment booking automation, 24/7 AI assistant, business automation, AI receptionist, lead capture, Vertex AI">
+    <meta name="author" content="Vertex AI Solutions &amp; Automations">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://vertex-ai-solutions-automations.com/">
+
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Vertex AI">
+    <meta property="og:title" content="Vertex AI — 24/7 WhatsApp &amp; Voice AI Automations for Every Business">
+    <meta property="og:description" content="Premium WhatsApp and AI voice automations — booking, lead capture and follow-up, 24/7, for any business. Intelligence in Motion.">
+    <meta property="og:url" content="https://vertex-ai-solutions-automations.com/">
+    <meta property="og:image" content="https://vertex-ai-solutions-automations.com/assets/images/hero-chat.jpg">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="@vertex-ai-solutions-automations — Intelligence in Motion">
+    <meta name="twitter:image" content="https://vertex-ai-solutions-automations.com/assets/images/hero-chat.jpg">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Vertex AI Solutions & Automations",
+      "alternateName": "Vertex AI",
+      "url": "https://vertex-ai-solutions-automations.com",
+      "logo": "https://vertex-ai-solutions-automations.com/assets/logo.svg",
+      "description": "24/7 WhatsApp and AI voice automations for any business — chatbots, appointment booking, lead capture.",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+1-443-483-1714",
+        "contactType": "customer service"
+      }
+    }
+    </script>
+
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- NAVBAR -->
-    <!-- NAVIGATION -->
-<nav>
-    <div class="nav-container">
-        <div class="logo">
-            <div class="logo-icon">🎯</div>
-            <span>DentalFlow AI</span>
-        </div>
-        <ul class="nav-links">
-            <li><a href="#features">Features</a></li>
-            <li><a href="#how-it-works">How It Works</a></li>
-            <li><a href="#results">Results</a></li>
-            <li><a href="#pricing">Pricing</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <li>
-                <a href="https://docs.google.com/forms/d/e/1FAIpQLScKXG2nsJCAxc8PqPirmDkLxTiBpADEq5Vpk-2WN2J0v0DWDg/viewform?usp=publish-editor" target="_blank">
-                    <button class="cta-button">Book Demo</button>
-                </a>
-            </li>
-        </ul>
-    </div>
-</nav>
 
-    <!-- HERO SECTION -->
-    <section class="hero">
-        <div class="container">
-            <div class="hero-content" data-aos="fade-up">
-                <h1>Your 24/7 <span class="gradient-text">AI Patient Booking Agent</span></h1>
-                <p>Never miss another patient call. DentalFlow AI answers, schedules appointments, and sends reminders—completely automated. Increase revenue while reducing no-shows.</p>
-                
+    <!-- PRELOADER -->
+    <div class="preloader" id="preloader" aria-hidden="true">
+        <div class="preloader-mark">
+            <img src="assets/logo.svg" alt="Vertex AI">
+        </div>
+        <div class="preloader-bar"><span></span></div>
+    </div>
+
+    <!-- SCROLL PROGRESS -->
+    <div class="scroll-progress" id="scroll-progress" aria-hidden="true"></div>
+<!-- ===== NAVBAR ===== -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <img src="assets/logo.svg" alt="Vertex AI logo" class="logo-img">
+                <span>Vertex<span class="logo-accent"> AI</span></span>
+            </a>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#services">Services</a></li>
+                <li><a href="#how-it-works">How it works</a></li>
+                <li><a href="#use-cases">Outcomes</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li class="nav-cta-mobile">
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLScKXG2nsJCAxc8PqPirmDkLxTiBpADEq5Vpk-2WN2J0v0DWDg/viewform?usp=publish-editor" target="_blank" rel="noopener">
+                        <button class="cta-button">Book a demo</button>
+                    </a>
+                </li>
+            </ul>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLScKXG2nsJCAxc8PqPirmDkLxTiBpADEq5Vpk-2WN2J0v0DWDg/viewform?usp=publish-editor" target="_blank" rel="noopener" class="nav-cta-desktop">
+                <button class="cta-button">Book a demo</button>
+            </a>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ===== HERO ===== -->
+    <section class="hero" id="top">
+        <div class="aurora" aria-hidden="true"><span class="orb orb-1"></span><span class="orb orb-2"></span><span class="orb orb-3"></span></div>
+        <div class="container hero-grid">
+            <div class="hero-content">
+                <span class="mono-tag">// intelligence in motion</span>
+                <h1 class="reveal-up">A 24/7 voice &amp; <span class="gradient-text">WhatsApp AI</span> that books you
+                    <span class="rotator" data-words="[&quot;appointments&quot;,&quot;leads&quot;,&quot;patients&quot;,&quot;clients&quot;,&quot;bookings&quot;]">appointments</span><span class="cursor">|</span>
+                </h1>
+                <p class="hero-sub">Vertex AI builds intelligent chatbots and AI voice agents for any business — answering, booking and following up around the clock, in your customers' language.</p>
                 <div class="hero-buttons">
-                    <button class="btn-secondary" data-aos="fade-up" data-aos-delay="200">Watch Demo Video</button>
+                    <a href="#contact"><button class="btn primary">Start automating</button></a>
+                    <a href="tel:+14434831714"><button class="btn ghost">Talk to an expert</button></a>
                 </div>
-
-                <div data-aos="fade-up" data-aos-delay="300">
-                    <div class="wave-container">
-                        <div class="wave-bar"></div>
-                        <div class="wave-bar"></div>
-                        <div class="wave-bar"></div>
-                        <div class="wave-bar"></div>
-                        <div class="wave-bar"></div>
-                        <div class="wave-bar"></div>
-                        <div class="wave-bar"></div>
-                    </div>
-                    <p class="wave-text">AI Voice Technology • Natural Conversations • 24/7 Available</p>
+                <div class="hero-stats">
+                    <div class="hs-item"><strong>24/7</strong><span>always on</span></div>
+                    <div class="hs-item"><strong>100%</strong><span>automated</span></div>
+                    <div class="hs-item"><strong>Any</strong><span>niche</span></div>
+                </div>
+            </div>
+            <div class="hero-visual tilt" data-tilt>
+                <div class="phone-frame">
+                    <img src="assets/images/hero-chat.jpg" alt="WhatsApp AI automation chat on a smartphone" loading="eager">
+                    <div class="float-card float-card-1">🤖 AI replying in seconds</div>
+                    <div class="float-card float-card-2">📅 Booking confirmed ✓</div>
+                    <div class="float-card float-card-3">24/7 — zero missed leads</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- FEATURES SECTION -->
-    <section class="features section-padding" id="features">
+    <!-- ===== MARQUEE / INDUSTRIES ===== -->
+    <section class="marquee" aria-label="Industries served">
+        <div class="marquee-track">
+            <div class="marquee-group">
+                <span>Healthcare</span><span>Real Estate</span><span>E-commerce</span><span>Salons &amp; Spas</span><span>Restaurants</span><span>Fitness</span><span>Automotive</span><span>Hospitality</span>
+            </div>
+            <div class="marquee-group" aria-hidden="true">
+                <span>Healthcare</span><span>Real Estate</span><span>E-commerce</span><span>Salons &amp; Spas</span><span>Restaurants</span><span>Fitness</span><span>Automotive</span><span>Hospitality</span>
+            </div>
+        </div>
+    </section>
+<!-- ===== SERVICES ===== -->
+    <section class="section services" id="services">
         <div class="container">
-            <h2 data-aos="fade-up">Enterprise-Grade Features</h2>
-            <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Everything your dental practice needs to automate patient communication and boost revenue.</p>
-
+            <div class="section-head">
+                <span class="mono-tag">// services</span>
+                <h2>We don't build chatbots — we automate outcomes.</h2>
+                <p class="subtitle">Every automation is engineered around one goal: turning conversations into confirmed revenue for your business.</p>
+            </div>
             <div class="features-grid">
-                <div class="feature-card" data-aos="fade-up" data-aos-delay="0">
-                    <div class="feature-icon">📞</div>
-                    <h3>Intelligent Call Handling</h3>
-                    <p>Answers calls instantly, 24/7. Understands patient intent and routes appropriately. Never miss a call again.</p>
-                </div>
-
-                <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
+                <article class="feature-card tilt" data-tilt>
+                    <div class="feature-icon">💬</div>
+                    <h3>WhatsApp automation</h3>
+                    <p>Instant AI replies, order updates, support and follow-ups — right in the channel your customers already use.</p>
+                </article>
+                <article class="feature-card tilt" data-tilt>
+                    <div class="feature-icon">🎙️</div>
+                    <h3>AI voice agent</h3>
+                    <p>A natural-sounding agent that answers every call 24/7, understands intent and resolves inquiries on the spot.</p>
+                </article>
+                <article class="feature-card tilt" data-tilt>
                     <div class="feature-icon">📅</div>
-                    <h3>Automatic Appointment Booking</h3>
-                    <p>Real-time scheduling integrated with your practice management system. Instant confirmations, no double bookings.</p>
-                </div>
-
-                <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
-                    <div class="feature-icon">🔔</div>
-                    <h3>Smart Reminder System</h3>
-                    <p>Automated 24-hour and 1-hour reminders. Reduces no-shows by 80%. Handles cancellations automatically.</p>
-                </div>
-
-                <div class="feature-card" data-aos="fade-up" data-aos-delay="300">
-                    <div class="feature-icon">🌍</div>
-                    <h3>Multi-Language Support</h3>
-                    <p>Serves patients in their preferred language. Automatically detects and responds in Spanish, Mandarin, and more.</p>
-                </div>
-
-                <div class="feature-card" data-aos="fade-up" data-aos-delay="400">
-                    <div class="feature-icon">⚙️</div>
-                    <h3>Seamless Integration</h3>
-                    <p>Works with all major practice management systems. Easy 10-minute setup with zero technical expertise needed.</p>
-                </div>
-
-                <div class="feature-card" data-aos="fade-up" data-aos-delay="500">
+                    <h3>Appointment booking</h3>
+                    <p>Real-time scheduling with instant confirmations, reminders and rescheduling — no double bookings, no no-shows.</p>
+                </article>
+                <article class="feature-card tilt" data-tilt>
+                    <div class="feature-icon">🎯</div>
+                    <h3>Lead capture &amp; follow-up</h3>
+                    <p>Qualify every lead and nurture it automatically so a deal never goes cold waiting for a human reminder.</p>
+                </article>
+                <article class="feature-card tilt" data-tilt>
+                    <div class="feature-icon">🌐</div>
+                    <h3>Multi-language</h3>
+                    <p>The AI detects and responds in your customers' language — from English and Spanish to dozens more.</p>
+                </article>
+                <article class="feature-card tilt" data-tilt>
                     <div class="feature-icon">📊</div>
-                    <h3>Advanced Analytics</h3>
-                    <p>Track every call, conversion rate, and ROI. Detailed insights to continuously optimize your practice.</p>
-                </div>
+                    <h3>Analytics &amp; reporting</h3>
+                    <p>Track every conversation, booking and conversion in one dashboard so you can scale with confidence.</p>
+                </article>
             </div>
         </div>
     </section>
 
-    <!-- HOW IT WORKS -->
-    <section class="how-it-works section-padding" id="how-it-works">
+    <!-- ===== HOW IT WORKS ===== -->
+    <section class="section how-it-works" id="how-it-works">
         <div class="container">
-            <h2 data-aos="fade-up">How DentalFlow AI Works</h2>
-            <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">A simple 4-step process that transforms patient communication.</p>
-
+            <div class="section-head">
+                <span class="mono-tag">// process</span>
+                <h2>Live in days, not months.</h2>
+                <p class="section-subtitle">No technical expertise required — we design, deploy and optimise everything for you.</p>
+            </div>
             <div class="process-steps">
-                <div class="step" data-aos="fade-up" data-aos-delay="0">
-                    <div class="step-number">1</div>
-                    <h3>Patient Calls</h3>
-                    <p>Your phone number connects to DentalFlow. The AI answers instantly with a warm, professional greeting.</p>
+                <div class="step reveal-up">
+                    <div class="step-number">01</div>
+                    <h3>Connect</h3>
+                    <p>We wire up your WhatsApp number, phone line, calendar and business details.</p>
                 </div>
-
-                <div class="step" data-aos="fade-up" data-aos-delay="100">
-                    <div class="step-number">2</div>
-                    <h3>AI Understands</h3>
-                    <p>Natural language processing identifies what the patient needs—appointment, emergency, reschedule, or questions.</p>
+                <div class="step reveal-up">
+                    <div class="step-number">02</div>
+                    <h3>Configure</h3>
+                    <p>We train your AI on your services, pricing and brand voice.</p>
                 </div>
-
-                <div class="step" data-aos="fade-up" data-aos-delay="200">
-                    <div class="step-number">3</div>
-                    <h3>Books Appointment</h3>
-                    <p>Real-time calendar sync. The AI checks availability and books directly into your system.</p>
+                <div class="step reveal-up">
+                    <div class="step-number">03</div>
+                    <h3>Launch</h3>
+                    <p>Your AI goes live on WhatsApp and voice — answering and booking 24/7.</p>
                 </div>
-
-                <div class="step" data-aos="fade-up" data-aos-delay="300">
-                    <div class="step-number">4</div>
-                    <h3>Automated Follow-up</h3>
-                    <p>Reminders sent automatically. Handles reschedules and cancellations without staff involvement.</p>
+                <div class="step reveal-up">
+                    <div class="step-number">04</div>
+                    <h3>Grow</h3>
+                    <p>We monitor performance and refine the flow to capture even more leads.</p>
                 </div>
             </div>
         </div>
     </section>
-
-    <!-- RESULTS SECTION -->
-    <section class="results section-padding" id="results">
+<!-- ===== OUTCOMES / USE CASES ===== -->
+    <section class="section outcomes" id="use-cases">
         <div class="container">
-            <h2 data-aos="fade-up">Results You Can Expect</h2>
-            <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Real numbers from dental practices using DentalFlow AI.</p>
+            <div class="section-head">
+                <span class="mono-tag">// outcomes</span>
+                <h2>One platform, proven across every niche.</h2>
+                <p class="section-subtitle">See how Vertex AI turns daily conversations into measurable business results.</p>
+            </div>
+            <div class="outcome-grid">
+                <article class="outcome-card tilt" data-tilt>
+                    <div class="outcome-media"><img src="assets/images/voice-agent.jpg" alt="AI voice agent with headset answering every customer call" loading="lazy"></div>
+                    <div class="outcome-body">
+                        <h3>Never miss a call</h3>
+                        <p>Your AI voice agent answers after hours, on weekends and on holidays — no forwarding, no voicemail purgatory.</p>
+                        <span class="tag">Voice</span>
+                    </div>
+                </article>
+                <article class="outcome-card tilt" data-tilt>
+                    <div class="outcome-media"><img src="assets/images/analytics.jpg" alt="Automation analytics dashboard showing conversions" loading="lazy"></div>
+                    <div class="outcome-body">
+                        <h3>Book on autopilot</h3>
+                        <p>Appointments scheduled, rescheduled and reminded automatically — straight into your calendar.</p>
+                        <span class="tag">Booking</span>
+                    </div>
+                </article>
+                <article class="outcome-card tilt" data-tilt>
+                    <div class="outcome-media"><img src="assets/images/team-collab.jpg" alt="Team collaborating on AI lead automation" loading="lazy"></div>
+                    <div class="outcome-body">
+                        <h3>Follow up on autopilot</h3>
+                        <p>Leads are captured, qualified and nurtured automatically, so your pipeline never runs cold.</p>
+                        <span class="tag">Sales</span>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
 
+    <!-- ===== RESULTS ===== -->
+    <section class="section results" id="results">
+        <div class="container">
+            <div class="section-head center">
+                <span class="mono-tag">// results</span>
+                <h2>Numbers that move your business.</h2>
+                <p class="section-subtitle">What businesses typically gain after their Vertex AI automation goes live.</p>
+            </div>
             <div class="stats-grid">
-                <div class="stat-box" data-aos="fade-up" data-aos-delay="0">
-                    <div class="stat-number">85%</div>
-                    <div class="stat-label">Fewer Missed Calls</div>
+                <div class="stat-box reveal-up">
+                    <div class="stat-number" data-count="85" data-suffix="%">0%</div>
+                    <div class="stat-label">Fewer missed leads</div>
                 </div>
-
-                <div class="stat-box" data-aos="fade-up" data-aos-delay="100">
-                    <div class="stat-number">45%</div>
-                    <div class="stat-label">More Booked Appointments</div>
+                <div class="stat-box reveal-up">
+                    <div class="stat-number" data-count="45" data-suffix="%">0%</div>
+                    <div class="stat-label">More confirmed bookings</div>
                 </div>
-
-                <div class="stat-box" data-aos="fade-up" data-aos-delay="200">
-                    <div class="stat-number">80%</div>
-                    <div class="stat-label">Reduction in No-Shows</div>
+                <div class="stat-box reveal-up">
+                    <div class="stat-number" data-count="80" data-suffix="%">0%</div>
+                    <div class="stat-label">Fewer no-shows</div>
                 </div>
-
-                <div class="stat-box" data-aos="fade-up" data-aos-delay="300">
-                    <div class="stat-number">24/7</div>
-                    <div class="stat-label">Always Available</div>
+                <div class="stat-box reveal-up">
+                    <div class="stat-number" data-count="24" data-suffix="/7">0/7</div>
+                    <div class="stat-label">Always available</div>
                 </div>
             </div>
-
-            <div class="revenue-highlight" data-aos="fade-up" data-aos-delay="400">
-                <p class="revenue-text">Average Practice Gains</p>
-                <div class="revenue-number">+$12K-15K Monthly Revenue</div>
-                <p style="color: var(--text-secondary); margin-top: 10px;">From recovered calls and automated scheduling</p>
+        </div>
+    </section>
+<!-- ===== TESTIMONIALS ===== -->
+    <section class="section testimonials" id="testimonials">
+        <div class="container">
+            <div class="section-head center">
+                <span class="mono-tag">// client stories</span>
+                <h2>Trusted by businesses like yours.</h2>
+            </div>
+            <div class="testimonial-grid">
+                <div class="testimonial-card tilt" data-tilt>
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">"We stopped losing after-hours calls completely. The AI books appointments like a real receptionist and our patients love it."</p>
+                    <div class="testimonial-footer">
+                        <div class="testimonial-avatar">🏥</div>
+                        <div><div class="testimonial-name">Clinic owner</div><div class="testimonial-role">Healthcare · Booking</div></div>
+                    </div>
+                </div>
+                <div class="testimonial-card tilt" data-tilt>
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">"The WhatsApp automation is seamless. Inquiries get answers instantly and follow-ups run themselves. Setup was fully handled."</p>
+                    <div class="testimonial-footer">
+                        <div class="testimonial-avatar">🛒</div>
+                        <div><div class="testimonial-name">E-commerce</div><div class="testimonial-role">WhatsApp &amp; Sales</div></div>
+                    </div>
+                </div>
+                <div class="testimonial-card tilt" data-tilt>
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">"No-shows dropped dramatically with automated reminders, and the voice agent answers even late at night. It pays for itself."</p>
+                    <div class="testimonial-footer">
+                        <div class="testimonial-avatar">💇</div>
+                        <div><div class="testimonial-name">Salon / service</div><div class="testimonial-role">Voice &amp; reminders</div></div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- TESTIMONIALS -->
-    <section class="testimonials section-padding" id="testimonials">
+    <!-- ===== PRICING ===== -->
+    <section class="section pricing" id="pricing">
         <div class="container">
-            <h2 data-aos="fade-up" style="text-align: center;">Trusted by Dental Practices</h2>
-
-            <div class="testimonial-card" data-aos="fade-up" data-aos-delay="100">
-                <div class="testimonial-avatar">👩‍⚕️</div>
-                <div class="testimonial-name">Dr. Sarah Mitchell</div>
-                <div class="testimonial-role">Premier Dental Group, California</div>
-                <p class="testimonial-text">"DentalFlow AI has been a complete game-changer. We went from missing 20+ calls daily to capturing almost every incoming call. The scheduling is seamless, natural-sounding, and our patients absolutely love it. We've recovered $40K+ in the first month alone."</p>
-                <div class="stars">★★★★★</div>
+            <div class="section-head center">
+                <span class="mono-tag">// pricing</span>
+                <h2>Transparent pricing. No lock-in.</h2>
+                <p class="section-subtitle">A simple setup fee plus a low monthly automation fee. Cancel anytime.</p>
             </div>
-        </div>
-    </section>
-
-    <!-- PRICING -->
-    <section class="pricing section-padding" id="pricing">
-        <div class="container">
-            <h2 data-aos="fade-up">Simple, Transparent Pricing</h2>
-            <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Only pay for what you use. No hidden fees. Cancel anytime.</p>
-
             <div class="pricing-grid">
-
-    <!-- Basic Plan -->
-    <div class="pricing-card" data-aos="fade-up" data-aos-delay="0">
-        <div class="pricing-title">Basic</div>
-        <div class="pricing-amount">$200</div>
-        <div class="pricing-subtext">One-Time Setup</div>
-
-        <ul class="pricing-features">
-            <li><span class="check-icon">✓</span> Up to 1,000 Calls / Month</li>
-            <li><span class="check-icon">✓</span> AI Call Handling & Appointment Booking</li>
-            <li><span class="check-icon">✓</span> Automated Appointment Reminders</li>
-            <li><span class="check-icon">✓</span> $20/Month Automation Charges After 1st Month</li>
-        </ul>
-    </div>
-
-    <!-- Professional Plan -->
-    <div class="pricing-card featured" data-aos="fade-up" data-aos-delay="100">
-        <div class="pricing-badge">MOST POPULAR</div>
-        <div class="pricing-title">Professional</div>
-        <div class="pricing-amount">$350</div>
-        <div class="pricing-subtext">One-Time Setup</div>
-
-        <ul class="pricing-features">
-            <li><span class="check-icon">✓</span> Unlimited Calls</li>
-            <li><span class="check-icon">✓</span> AI Call Handling & Appointment Booking</li>
-            <li><span class="check-icon">✓</span> Automated Appointment Reminders</li>
-            <li><span class="check-icon">✓</span> $40/Month Automation Charges After 1st Month</li>
-        </ul>
-    </div>
-
-</div>
-        </div>
-    </section>
-
-    <!-- CTA -->
-    <section class="section-padding" id="contact">
-    <div class="container">
-        <div class="cta">
-            <h2>Ready to Transform Your Practice?</h2>
-            <p>Join the fastest-growing dental practices using DentalFlow AI</p>
-            <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
-                <a href="tel:+14434831714">
-                    <button class="btn-secondary">Demo Call</button>
-                </a>
+                <div class="pricing-card tilt" data-tilt>
+                    <div class="pricing-title">Starter</div>
+                    <div class="pricing-amount">$200</div>
+                    <div class="pricing-subtext">one-time setup</div>
+                    <ul class="pricing-features">
+                        <li><span class="check">✓</span> Up to 1,000 interactions / month</li>
+                        <li><span class="check">✓</span> WhatsApp chatbot &amp; AI booking</li>
+                        <li><span class="check">✓</span> Reminders &amp; follow-ups</li>
+                        <li><span class="check">✓</span> $20 / month after 1st month</li>
+                    </ul>
+                </div>
+                <div class="pricing-card featured tilt" data-tilt>
+                    <div class="pricing-badge">Most popular</div>
+                    <div class="pricing-title">Professional</div>
+                    <div class="pricing-amount">$350</div>
+                    <div class="pricing-subtext">one-time setup</div>
+                    <ul class="pricing-features">
+                        <li><span class="check">✓</span> Unlimited interactions</li>
+                        <li><span class="check">✓</span> WhatsApp + AI voice agent</li>
+                        <li><span class="check">✓</span> Booking &amp; rescheduling</li>
+                        <li><span class="check">✓</span> $40 / month automation fee</li>
+                    </ul>
+                </div>
+                <div class="pricing-card tilt" data-tilt>
+                    <div class="pricing-title">Enterprise</div>
+                    <div class="pricing-amount">Custom</div>
+                    <div class="pricing-subtext">tailored solution</div>
+                    <ul class="pricing-features">
+                        <li><span class="check">✓</span> Multiple lines &amp; locations</li>
+                        <li><span class="check">✓</span> Custom CRM integrations</li>
+                        <li><span class="check">✓</span> Dedicated AI, your brand</li>
+                        <li><span class="check">✓</span> Priority support &amp; SLA</li>
+                    </ul>
+                </div>
             </div>
         </div>
-    </div>
+    </section>
+<!-- ===== FAQ ===== -->
+    <section class="section faq" id="faq">
+        <div class="container narrow">
+            <div class="section-head center">
+                <span class="mono-tag">// faq</span>
+                <h2>Questions, answered.</h2>
+            </div>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">How fast can we launch?<span class="faq-icon">+</span></button>
+                    <div class="faq-answer"><p>Most businesses are fully live within a few days. We handle the entire setup — you just provide your business details and content style.</p></div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">Which industries do you support?<span class="faq-icon">+</span></button>
+                    <div class="faq-answer"><p>All of them. Healthcare, real estate, e-commerce, salons, fitness, automotive, hospitality and more. The AI is trained to your niche.</p></div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">Is it really available 24/7?<span class="faq-icon">+</span></button>
+                    <div class="faq-answer"><p>Yes. Your WhatsApp and voice agent work around the clock — evenings, weekends and holidays — so no lead ever goes unanswered.</p></div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">How is my data protected?<span class="faq-icon">+</span></button>
+                    <div class="faq-answer"><p>Data is stored securely, processed only to run your automation, and never sold. See our <a href="privacy-policy.html">Privacy Policy</a>.</p></div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">Can I cancel anytime?<span class="faq-icon">+</span></button>
+                    <div class="faq-answer"><p>Absolutely. There's no long-term lock-in. Cancel before your next billing cycle and you won't be charged again.</p></div>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <!-- FOOTER -->
-    <footer>
+    <!-- ===== CTA ===== -->
+    <section class="section cta-section" id="contact">
+        <div class="container">
+            <div class="cta">
+                <span class="mono-tag">// let's talk</span>
+                <h2>Ready to put your business on autopilot?</h2>
+                <p>Tell us your niche and we'll show you exactly what Vertex AI can do.</p>
+                <div class="cta-buttons">
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLScKXG2nsJCAxc8PqPirmDkLxTiBpADEq5Vpk-2WN2J0v0DWDg/viewform?usp=publish-editor" target="_blank" rel="noopener" class="btn primary">Book a free demo</a>
+                    <a href="https://wa.me/14434831714" target="_blank" rel="noopener" class="btn whatsapp">WhatsApp us</a>
+                    <a href="tel:+14434831714" class="btn ghost">+1 443-483-1714</a>
+                </div>
+                <p class="cta-note">Response within one business day · no obligation</p>
+            </div>
+        </div>
+    </section>
+<!-- ===== FOOTER ===== -->
+    <footer class="footer">
         <div class="container">
             <div class="footer-content">
-                <div class="footer-column">
-                    <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 15px;">
-                        <div class="logo-icon">🎯</div>
-                        <span style="font-weight: 700; font-size: 1.1rem;">DentalFlow AI</span>
-                    </div>
-                    <p style="color: var(--text-secondary);">Enterprise AI voice agent for dental practices. Never miss a patient again.</p>
+                <div class="footer-column brand">
+                    <a href="index.html" class="logo">
+                        <img src="assets/logo.svg" alt="Vertex AI logo" class="logo-img">
+                        <span>Vertex<span class="logo-accent"> AI</span></span>
+                    </a>
+                    <p class="footer-desc">WhatsApp &amp; voice AI automations for any business. Available 24/7. Intelligence in Motion.</p>
+                    <p class="footer-handle">@vertex-ai-solutions-automations</p>
                 </div>
-
                 <div class="footer-column">
                     <h4>Product</h4>
                     <ul>
-                        <li><a href="#features">Features</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#how-it-works">How it works</a></li>
+                        <li><a href="#use-cases">Outcomes</a></li>
                         <li><a href="#pricing">Pricing</a></li>
-                        <li><a href="#">Security</a></li>
-                        <li><a href="#">API Docs</a></li>
+                        <li><a href="#faq">FAQ</a></li>
                     </ul>
                 </div>
-
                 <div class="footer-column">
                     <h4>Company</h4>
                     <ul>
-                        <li><a href="#">About Us</a></li>
-                        <li><a href="#">Blog</a></li>
-                        <li><a href="#">Careers</a></li>
-                        <li><a href="#">Contact</a></li>
+                        <li><a href="#results">Results</a></li>
+                        <li><a href="#testimonials">Testimonials</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="tel:+14434831714">Demo call</a></li>
                     </ul>
                 </div>
-
                 <div class="footer-column">
                     <h4>Legal</h4>
                     <ul>
-                        <li><a href="#">Privacy Policy</a></li>
-                        <li><a href="#">Terms of Service</a></li>
-                        <li><a href="#">Cookie Policy</a></li>
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="terms-and-conditions.html">Terms &amp; Conditions</a></li>
                     </ul>
                 </div>
             </div>
-
             <div class="footer-bottom">
-                <p>&copy; 2026 DentalFlow AI. All rights reserved.</p>
+                <p>&copy; <span id="year"></span> Vertex AI Solutions &amp; Automations. All rights reserved.</p>
+                <p class="footer-tag">Intelligence in Motion.</p>
             </div>
         </div>
     </footer>
 
-    <!-- SCRIPTS -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- BACK TO TOP -->
+    <button class="back-to-top" id="back-to-top" aria-label="Back to top" aria-hidden="true">↑</button>
+
     <script src="script.js"></script>
 </body>
 </html>

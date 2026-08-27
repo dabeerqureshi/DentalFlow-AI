@@ -1,0 +1,17 @@
+# OS / editor junk
+.DS_Store
+Thumbs.db
+*.swp
+*.tmp
+*.bak
+*~
+
+# Logs
+*.log
+*.log.*
+
+# Local test servers / build
+__pycache__/
+*.pyc
+.vscode/
+.idea/

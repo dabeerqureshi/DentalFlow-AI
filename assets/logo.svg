@@ -1,0 +1,13 @@
+<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Vertex AI logo">
+  <defs>
+    <linearGradient id="vgrad" x1="0" y1="0" x2="48" y2="48" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#f5b73b"/>
+      <stop offset="0.5" stop-color="#f59e0b"/>
+      <stop offset="1" stop-color="#22d3ee"/>
+    </linearGradient>
+  </defs>
+  <rect width="48" height="48" rx="12" fill="#0a0a0c"/>
+  <rect x="1" y="1" width="46" height="46" rx="11" fill="url(#vgrad)"/>
+  <path d="M24 9 L35 38 L30.5 38 L27.2 27.5 L27.4 27.5 L15 38 L10 38 L22 27.5 L22.2 27.5 L18.9 38 L14.4 38 L24 9 Z" fill="#0a0a0c"/>
+  <circle cx="30.5" cy="12" r="2.6" fill="#ffffff" opacity="0.9"/>
+</svg>
