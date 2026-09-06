@@ -1,13 +1,13 @@
-<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Vertex AI logo">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="DHQ Limited logo">
   <defs>
-    <linearGradient id="vgrad" x1="0" y1="0" x2="48" y2="48" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#f5b73b"/>
-      <stop offset="0.5" stop-color="#f59e0b"/>
+    <linearGradient id="dhqgrad" x1="0" y1="0" x2="512" y2="512" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#fde68a"/>
+      <stop offset="0.52" stop-color="#f59e0b"/>
       <stop offset="1" stop-color="#22d3ee"/>
     </linearGradient>
   </defs>
-  <rect width="48" height="48" rx="12" fill="#0a0a0c"/>
-  <rect x="1" y="1" width="46" height="46" rx="11" fill="url(#vgrad)"/>
-  <path d="M24 9 L35 38 L30.5 38 L27.2 27.5 L27.4 27.5 L15 38 L10 38 L22 27.5 L22.2 27.5 L18.9 38 L14.4 38 L24 9 Z" fill="#0a0a0c"/>
-  <circle cx="30.5" cy="12" r="2.6" fill="#ffffff" opacity="0.9"/>
+  <rect x="16" y="16" width="480" height="480" rx="112" fill="#0a0a0c"/>
+  <rect x="16" y="16" width="480" height="480" rx="112" fill="none" stroke="url(#dhqgrad)" stroke-width="14"/>
+  <text x="256" y="266" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="168" font-weight="800" fill="url(#dhqgrad)" letter-spacing="4">DHQ</text>
+  <text x="256" y="368" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="46" font-weight="600" fill="#f5f3f0" letter-spacing="16">LIMITED</text>
 </svg>

@@ -19,8 +19,8 @@
     // Convert a pasted video URL into an embeddable iframe URL
     function toEmbedUrl(url) {
         url = (url || '').trim();
-        var yt = url.match(/(?:youtube\.com\/(?:watch\?v=|embed\/|shorts\/)|youtu\.be\/)([\w-]{6,})/);
-        if (yt) return 'https://www.youtube.com/embed/' + yt[1] + '?rel=0&autoplay=1';
+        var yt = url.match(/(?:youtube\.com\/(?:watch\?v=|embed\/|shorts\/|live\/)|youtu\.be\/)([\w-]{6,})/);
+        if (yt) return 'https://www.youtube-nocookie.com/embed/' + yt[1] + '?rel=0&autoplay=1&playsinline=1';
         if (url.indexOf('drive.google.com') !== -1) {
             var m = url.match(/[-\w]{25,}/);
             if (m) return 'https://drive.google.com/file/d/' + m[0] + '/preview';
@@ -232,6 +232,7 @@
         var lightboxTitle = document.getElementById('lightbox-title');
         var lightboxOpenLink = document.getElementById('lightbox-open');
         var currentEmbed = '';
+        var lastFocused = null;
 
         var openLightbox = function (url, title) {
             if (!lightbox || !url) return;
@@ -241,6 +242,9 @@
             if (lightboxOpenLink) { if (/youtu\.?be/.test(url)) { lightboxOpenLink.href = url; lightboxOpenLink.style.display = 'inline'; } else { lightboxOpenLink.style.display = 'none'; } }
             lightbox.classList.add('open');
             lightbox.setAttribute('aria-hidden', 'false');
+            lastFocused = document.activeElement;
+            var lbCloseBtn = document.getElementById('lightbox-close');
+            if (lbCloseBtn) lbCloseBtn.focus();
             document.body.style.overflow = 'hidden';
         };
 
@@ -248,6 +252,7 @@
             if (!lightbox) return;
             lightbox.classList.remove('open');
             lightbox.setAttribute('aria-hidden', 'true');
+            if (lastFocused && lastFocused.focus) lastFocused.focus();
             document.body.style.overflow = '';
             if (lightboxOpenLink) lightboxOpenLink.style.display = 'none';
             setTimeout(function () { if (lightboxFrame) lightboxFrame.innerHTML = ''; currentEmbed = ''; }, 300);

@@ -68,7 +68,8 @@ YouTube (including Shorts), Vimeo and Google Drive links are supported — video
 
 ## Notes
 
-- Canonical URLs, sitemap and JSON-LD still use the `vertex-ai-solutions-automations.com` domain — replace it with your final domain (e.g. `dhqlimited.com`) across `*.html`, `sitemap.xml` and `robots.txt` when ready.
+- Canonical URLs, sitemap and JSON-LD use `https://dhqlimited.com/` — if your live domain differs, replace it across `*.html`, `sitemap.xml` and `robots.txt`.
+- Create a 1200×630 `og-image.png` for richer social sharing previews (currently the hero photos are used).
 
 The repo folder is still named `DentalFlow-AI` (git origin). Renaming the remote repo to
 match DHQ Limited is optional.

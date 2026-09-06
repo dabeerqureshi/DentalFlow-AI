@@ -169,6 +169,7 @@ h1, h2, h3, h4 { font-family: var(--font-head); letter-spacing: -0.02em; }
 .nav-links > li > a:hover::after { width: 100%; }
 
 .cta-button {
+    display: inline-block;
     padding: 11px 24px;
     background: transparent;
     color: var(--bg);
@@ -526,7 +527,6 @@ h1, h2, h3, h4 { font-family: var(--font-head); letter-spacing: -0.02em; }
 .demo-card:hover .demo-thumb img { transform: scale(1.05); opacity: 1; }
 .play-btn { position: absolute; inset: 0; margin: auto; width: 66px; height: 66px; border-radius: 50%; background: rgba(10,10,12,.55); border: 1px solid rgba(247,188,83,.55); display: flex; align-items: center; justify-content: center; color: var(--gold); font-size: 1.35rem; padding-left: 5px; backdrop-filter: blur(4px); -webkit-backdrop-filter: blur(4px); transition: transform .3s ease, background .3s ease; pointer-events: none; }
 .demo-card:hover .play-btn { transform: scale(1.1); background: rgba(247,188,83,.22); }
-.demo-duration { position: absolute; bottom: 10px; right: 12px; padding: 3px 10px; border-radius: 6px; background: rgba(10,10,12,.8); font-family: var(--font-mono); font-size: .72rem; color: var(--text-2); }
 .soon-tag { position: absolute; top: 10px; left: 12px; display: none; padding: 4px 12px; border-radius: 6px; background: rgba(10,10,12,.85); border: 1px solid rgba(247,188,83,.4); font-family: var(--font-mono); font-size: .68rem; text-transform: uppercase; letter-spacing: .06em; color: var(--gold); }
 .demo-card.no-video .soon-tag { display: inline-block; }
 .demo-card.no-video .play-btn { border-color: var(--border-strong); color: var(--text-3); }

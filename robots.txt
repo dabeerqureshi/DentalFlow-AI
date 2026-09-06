@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://vertex-ai-solutions-automations.com/sitemap.xml
+Sitemap: https://dhqlimited.com/sitemap.xml
