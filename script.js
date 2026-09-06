@@ -3,6 +3,36 @@
     'use strict';
     var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
+    /* ============ DEMO VIDEOS CONFIG ============
+       Paste your real video URLs here (YouTube, Vimeo or Google Drive links).
+       Each key maps to a .demo-card element via its data-video-key attribute.
+       Leave a key as '' to show the "Demo coming soon" state for that card. */
+    var DEMO_VIDEOS = {
+        'whatsapp-booking': '',
+        'voice-agent': '',
+        'chatbot-website': '',
+        'lead-workflow': '',
+        'website-launch': '',
+        'seo-results': ''
+    };
+
+    // Convert a pasted video URL into an embeddable iframe URL
+    function toEmbedUrl(url) {
+        url = (url || '').trim();
+        var yt = url.match(/(?:youtube\.com\/(?:watch\?v=|embed\/|shorts\/)|youtu\.be\/)([\w-]{6,})/);
+        if (yt) return 'https://www.youtube.com/embed/' + yt[1] + '?rel=0&autoplay=1';
+        if (url.indexOf('drive.google.com') !== -1) {
+            var m = url.match(/[-\w]{25,}/);
+            if (m) return 'https://drive.google.com/file/d/' + m[0] + '/preview';
+        }
+        if (url.indexOf('vimeo.com') !== -1) {
+            var v = url.match(/vimeo\.com\/(\d+)/);
+            if (v) return 'https://player.vimeo.com/video/' + v[1] + '?autoplay=1';
+        }
+        return url;
+    }
+
+
     function ready(fn) {
         if (document.readyState !== 'loading') fn();
         else document.addEventListener('DOMContentLoaded', fn);
@@ -195,5 +225,61 @@
         // ============ DYNAMIC YEAR ============
         var yearEl = document.getElementById('year');
         if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+        // ============ DEMO VIDEO CARDS + LIGHTBOX ============
+        var lightbox = document.getElementById('lightbox');
+        var lightboxFrame = document.getElementById('lightbox-frame');
+        var lightboxTitle = document.getElementById('lightbox-title');
+        var currentEmbed = '';
+
+        var openLightbox = function (url, title) {
+            if (!lightbox || !url) return;
+            currentEmbed = toEmbedUrl(url);
+            if (lightboxFrame) lightboxFrame.innerHTML = '<iframe src="' + currentEmbed + '" title="' + (title || 'Demo video') + '" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>';
+            if (lightboxTitle) lightboxTitle.textContent = title || 'Demo video';
+            lightbox.classList.add('open');
+            lightbox.setAttribute('aria-hidden', 'false');
+            document.body.style.overflow = 'hidden';
+        };
+
+        var closeLightbox = function () {
+            if (!lightbox) return;
+            lightbox.classList.remove('open');
+            lightbox.setAttribute('aria-hidden', 'true');
+            document.body.style.overflow = '';
+            setTimeout(function () { if (lightboxFrame) lightboxFrame.innerHTML = ''; currentEmbed = ''; }, 300);
+        };
+
+        document.querySelectorAll('.demo-card').forEach(function (card) {
+            var key = card.getAttribute('data-video-key') || '';
+            var url = (typeof DEMO_VIDEOS !== 'undefined' && DEMO_VIDEOS[key]) ? DEMO_VIDEOS[key] : (card.getAttribute('data-video') || '');
+            var titleEl = card.querySelector('h3');
+            var title = titleEl ? titleEl.textContent : 'Demo video';
+
+            if (!url) {
+                // No video yet — mark as "coming soon" and scroll to contact on click
+                card.classList.add('no-video');
+                card.addEventListener('click', function () {
+                    var contact = document.querySelector('#contact');
+                    if (contact) {
+                        var pos = contact.getBoundingClientRect().top + window.scrollY - 70;
+                        window.scrollTo({ top: pos, behavior: reduceMotion ? 'auto' : 'smooth' });
+                    }
+                });
+                return;
+            }
+            var activate = function () { openLightbox(url, title); };
+            card.addEventListener('click', activate);
+            card.addEventListener('keydown', function (e) {
+                if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); activate(); }
+            });
+        });
+
+        if (lightbox) {
+            var lbClose = document.getElementById('lightbox-close');
+            if (lbClose) lbClose.addEventListener('click', closeLightbox);
+            lightbox.addEventListener('click', function (e) { if (e.target === lightbox) closeLightbox(); });
+            document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeLightbox(); });
+        }
     });
 })();
