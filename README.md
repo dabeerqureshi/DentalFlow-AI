@@ -1,6 +1,6 @@
-# Vertex AI — Solutions & Automations
+# DHQ Limited
 
-**Intelligence in Motion.** Official website for Vertex AI — websites, AI automation, chatbots,
+**Intelligence in Motion.** Official website for DHQ Limited — websites, AI automation, chatbots,
 voice assistants, MCP servers, enterprise systems, SEO and lead-generation workflows for any
 business, worldwide.
 
@@ -54,7 +54,7 @@ var DEMO_VIDEOS = {
 };
 ```
 
-YouTube, Vimeo and Google Drive links are supported. Cards left as `''` show a
+YouTube (including Shorts), Vimeo and Google Drive links are supported — videos play right on the site in a pop-up player. Cards left as `''` show a
 "Demo coming soon" badge and scroll to the contact section when clicked.
 
 ## SEO checklist (already done)
@@ -66,7 +66,9 @@ YouTube, Vimeo and Google Drive links are supported. Cards left as `''` show a
 - `sitemap.xml` lists all 12 pages; `robots.txt` allows all crawlers
 - Lazy-loaded images/iframes, preconnected fonts, reduced-motion support
 
-## Note
+## Notes
+
+- Canonical URLs, sitemap and JSON-LD still use the `vertex-ai-solutions-automations.com` domain — replace it with your final domain (e.g. `dhqlimited.com`) across `*.html`, `sitemap.xml` and `robots.txt` when ready.
 
 The repo folder is still named `DentalFlow-AI` (git origin). Renaming the remote repo to
-match Vertex AI is optional.
+match DHQ Limited is optional.

@@ -1,4 +1,4 @@
-// Vertex AI — animation & interaction engine (vanilla JS)
+// DHQ Limited — animation & interaction engine (vanilla JS)
 (function () {
     'use strict';
     var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -230,6 +230,7 @@
         var lightbox = document.getElementById('lightbox');
         var lightboxFrame = document.getElementById('lightbox-frame');
         var lightboxTitle = document.getElementById('lightbox-title');
+        var lightboxOpenLink = document.getElementById('lightbox-open');
         var currentEmbed = '';
 
         var openLightbox = function (url, title) {
@@ -237,6 +238,7 @@
             currentEmbed = toEmbedUrl(url);
             if (lightboxFrame) lightboxFrame.innerHTML = '<iframe src="' + currentEmbed + '" title="' + (title || 'Demo video') + '" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>';
             if (lightboxTitle) lightboxTitle.textContent = title || 'Demo video';
+            if (lightboxOpenLink) { if (/youtu\.?be/.test(url)) { lightboxOpenLink.href = url; lightboxOpenLink.style.display = 'inline'; } else { lightboxOpenLink.style.display = 'none'; } }
             lightbox.classList.add('open');
             lightbox.setAttribute('aria-hidden', 'false');
             document.body.style.overflow = 'hidden';
@@ -247,6 +249,7 @@
             lightbox.classList.remove('open');
             lightbox.setAttribute('aria-hidden', 'true');
             document.body.style.overflow = '';
+            if (lightboxOpenLink) lightboxOpenLink.style.display = 'none';
             setTimeout(function () { if (lightboxFrame) lightboxFrame.innerHTML = ''; currentEmbed = ''; }, 300);
         };
 
